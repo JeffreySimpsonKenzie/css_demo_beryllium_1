@@ -1,15 +1,49 @@
-/* This will give styling to all elements. Good for setting default styling. */
-* {
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  /* border: 5px solid red; */
-}
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto&display=swap");
 
 :root {
-  /* border: 3px solid red; */
   --dark-gray: rgb(49, 49, 49);
+  --green: #1ebf6f;
+  --dark-blue: #181820;
+  --dark-maroon: #795d68;
+  --light-blue: #356fa1;
+  --cream-white: #f5eff1;
+  --roboto: "Roboto", sans-serif;
+  --rampart: "Rampart One", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 3px solid red; */
 }
 
+/* This will give styling to all elements. Good for setting default styling. */
+* {
+  background: var(--dark-gray);
+  color: var(--cream-white);
+  font-family: var(--roboto);
+}
+
+.page-button {
+  background: var(--light-blue);
+  border: 2px solid var(--cream-white);
+  font-size: 17px;
+  padding: 7px;
+  transition-duration: 0.3s;
+}
+
+.page-button:hover {
+  background: var(--cream-white);
+  color: var(--light-blue);
+  cursor: pointer;
+  box-shadow: 3px 2px 6px 1px #fcfafa52;
+}
+
+.page-button:active {
+  transform: scale(90%);
+}
+
+.new-font {
+  font-family: var(--rampart);
+}
 /* Will style any element with this class */
 .cool {
   color: rebeccapurple;
@@ -21,19 +55,37 @@
 
 /* The h1's selector */
 h1 {
-  border: 2px solid red;
   padding: 3px;
   width: fit-content;
+  font-family: var(--rampart);
 }
 
 /* The h1's class */
-.page-heading {
+h1.page-heading {
   border: 2px solid blue;
 }
 
 /* The h1's id selector */
-#page-heading {
+h1#page-heading {
   border: 2px solid green;
+}
+
+.question-box {
+  display: flex;
+  border: 10px groove var(--green);
+  padding: 8px;
+  margin: 7px;
+  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+}
+
+#answer-input {
+  background: var(--cream-white);
+  color: var(--dark-blue);
+  border: 2px solid var(--light-blue);
+  /* padding: 5px; */
+  font-size: 22px;
 }
 
 .correct-answer {
